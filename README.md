@@ -92,7 +92,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - TEST_PROXY=1
+      - TEST_PROXY="https://example.com"
     volumes:
       - /path/to/pyload/config:/config
       - /path/to/downloads:/downloads
@@ -110,7 +110,7 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
-  -e TEST_PROXY=1 \
+  -e TEST_PROXY="https://example.com" \
   -p 8000:8000 \
   -p 7227:7227 `#optional` \
   -v /path/to/pyload/config:/config \
